@@ -1,0 +1,183 @@
+# This workflow uses actions that are not certified by GitHub.
+# They are provided by a third-party and are governed by
+# separate terms of service, privacy policy, and support
+# documentation.
+# This workflow will build a Java project with Gradle and cache/restore any dependencies to improve the workflow execution time
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-java-with-gradle
+
+name: Java CI with Gradle
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up JDK 17
+      uses: actions/setup-java@v4
+      with:
+        java-version: '17'
+        distribution: 'temurin'
+
+    # Configure Gradle for optimal use in GitHub Actions, including caching of downloaded dependencies.
+    # See: https://github.com/gradle/actions/blob/main/setup-gradle/README.md
+    - name: Setup Gradle
+      uses: gradle/actions/setup-gradle@af1da67850ed9a4cedd57bfd976089dd991e2582 # v4.0.0
+
+    - name: Bui<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reels Filme 2025 - Toate Genurile</title>
+    <style>
+        body { background: #23272f; color: #f4f4f7; font-family: Arial, sans-serif; margin: 0;}
+        header { background: #171a1d; text-align: center; padding: 20px 0;}
+        h1 { margin-bottom: 0;}
+        .genres { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin: 15px 0;}
+        .genre {
+            background: #353945; color: #fff; padding: 6px 16px; border-radius: 15px;
+            cursor: pointer; font-size: 1em; user-select: none;
+            border: 2px solid #353945; transition: border-color 0.2s;
+        }
+        .genre.active { border-color: #f2e274; color: #f2e274;}
+        .reels-list { display: flex; flex-wrap: wrap; justify-content: center; padding: 10px 0 18px 0;}
+        .reel-card {
+            background: #292d35; width: 95vw; max-width: 350px; border-radius: 12px;
+            margin: 8px; overflow: hidden; box-shadow: 0 2px 6px #03102a20; padding-bottom: 10px;
+        }
+        @media(min-width: 600px) { .reel-card{width: 260px;}}
+        video, iframe {
+            width: 100%; height: 210px; border-radius: 7px 7px 0 0; background: #000;
+        }
+        .reel-info { padding: 8px 12px 0 12px;}
+        .reel-title { font-size: 1.1em; margin: 0 0 5px 0; color: #f2e274;}
+        .reel-genre {
+            font-size: 0.92em; background: #20243a; color: #b6b6ec;
+            border-radius: 7px; padding: 2px 10px; display: inline-block; margin-bottom: 6px;
+        }
+        .hidden {display: none;}
+    </style>
+</head>
+<body>
+<header>
+    <h1>Reels Filme 2025</h1>
+    <div style="margin-bottom:6px;">Toate genurile · Clipuri scurte reale</div>
+    <div class="genres" id="genreFilters">
+        <span class="genre active" data-genre="toate">Toate</span>
+        <span class="genre" data-genre="actiune">Acțiune</span>
+        <span class="genre" data-genre="drama">Dramă</span>
+        <span class="genre" data-genre="romantic">Romantic</span>
+        <span class="genre" data-genre="comedie">Comedie</span>
+        <span class="genre" data-genre="scifi">SF</span>
+        <span class="genre" data-genre="aventura">Aventură</span>
+    </div>
+</header>
+<section class="reels-list" id="reelsList">
+
+    <!-- Acțiune -->
+    <div class="reel-card" data-genre="actiune">
+        <iframe src="https://www.youtube.com/embed/NmWYG_mYQEg" title="Trailer Acțiune 2025" frameborder="0" allowfullscreen></iframe>
+        <div class="reel-info">
+            <div class="reel-title">Pursuit: Urmărirea (2025)</div>
+            <div class="reel-genre">Acțiune</div>
+        </div>
+    </div>
+
+    <!-- Dramă -->
+    <div class="reel-card" data-genre="drama">
+        <iframe src="https://www.youtube.com/embed/V8Kj8wZ0EDk" title="Dramă 2025 reel" frameborder="0" allowfullscreen></iframe>
+        <div class="reel-info">
+            <div class="reel-title">Fără Regrete</div>
+            <div class="reel-genre">Dramă</div>
+        </div>
+    </div>
+
+    <!-- Sci-Fi -->
+    <div class="reel-card" data-genre="scifi">
+        <iframe src="https://player.vimeo.com/video/879227754" title="Sci-Fi 2025 reel" frameborder="0" allowfullscreen></iframe>
+        <div class="reel-info">
+            <div class="reel-title">Hyperspace Frontier (2025)</div>
+            <div class="reel-genre">SF</div>
+        </div>
+    </div>
+
+    <!-- Comedie -->
+    <div class="reel-card" data-genre="comedie">
+        <iframe src="https://www.youtube.com/embed/Cm_MWUCHjGU" title="Comedie 2025 reel" frameborder="0" allowfullscreen></iframe>
+        <div class="reel-info">
+            <div class="reel-title">Haz de Necaz</div>
+            <div class="reel-genre">Comedie</div>
+        </div>
+    </div>
+
+    <!-- Romantic/Dramă -->
+    <div class="reel-card" data-genre="romantic">
+        <iframe src="https://player.vimeo.com/video/630338130" title="Romantic 2025 reel" frameborder="0" allowfullscreen></iframe>
+        <div class="reel-info">
+            <div class="reel-title">Înainte de Răsărit</div>
+            <div class="reel-genre">Romantic</div>
+        </div>
+    </div>
+
+    <!-- Aventură -->
+    <div class="reel-card" data-genre="aventura">
+        <iframe src="https://www.youtube.com/embed/-bjQ9Jue7tc" title="Aventură 2025 reel" frameborder="0" allowfullscreen></iframe>
+        <div class="reel-info">
+            <div class="reel-title">Expediția Arctică</div>
+            <div class="reel-genre">Aventură</div>
+        </div>
+    </div>
+
+    <!-- Sci-Fi Acțiune -->
+    <div class="reel-card" data-genre="scifi actiune">
+        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Sci-Fi Acțiune" frameborder="0" allowfullscreen></iframe>
+        <div class="reel-info">
+            <div class="reel-title">Stellar Echoes</div>
+            <div class="reel-genre">SF, Acțiune</div>
+        </div>
+    </div>
+
+</section>
+
+<script>
+    const genres = document.querySelectorAll('.genre');
+    const reels = document.querySelectorAll('.reel-card');
+    genres.forEach(btn => {
+        btn.addEventListener('click', ()=>{
+            document.querySelector('.genre.active').classList.remove('active');
+            btn.classList.add('active');
+            const genre = btn.getAttribute('data-genre');
+            reels.forEach(rc=>{
+                if(genre === 'toate') {
+                    rc.classList.remove('hidden');
+                } else {
+                    let rcGenre = rc.getAttribute('data-genre');
+                    // Cautare inclusiva (poate fi "scifi actiune", etc.)
+                    if(rcGenre.includes(genre)) {
+                        rc.classList.remove('hidden');
+                    } else {
+                        rc.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    });
+</script>
+</body>
+</html>
+
+
+    # Generates and submits a dependency graph, enabling Dependabot Alerts for all project dependencies.
+    # See: https://github.com/gradle/actions/blob/main/dependency-submission/README.md
+    - name: Generate and submit dependency graph
+      uses: gradle/actions/dependency-submission@af1da67850ed9a4cedd57bfd976089dd991e2582 # v4.0.0
